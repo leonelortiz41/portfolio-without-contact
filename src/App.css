@@ -1,0 +1,219 @@
+body {
+    background-image: linear-gradient(to bottom,
+            #000000,
+            rgba(38, 70, 38, 0.5)),
+        url("../src/assets/bg-4.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    user-select: none;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.skills:hover {
+    filter: drop-shadow(2px -2px 4px #e1ff00);
+}
+
+.card-blur {
+    background: rgba(0, 0, 0, 0.256);
+    backdrop-filter: blur(7px);
+
+}
+
+.body-header {
+    box-shadow: 1px 1px 11px #e1ff00;
+    z-index: 100;
+}
+
+.body-header .name {
+    font-size: 25px;
+}
+
+.body-header .btn {
+    color: #e1ff00;
+}
+
+.btn {
+    border: none;
+}
+
+.btn-blackgreen {
+    color: #e1ff00;
+    background: #111;
+}
+
+.btn-blackgreen:hover {
+    color: #fff;
+    box-shadow: 2px 2px 5px #000;
+    /* background: #e1ff00; */
+}
+
+.body-header .btn:hover {
+    color: #fff;
+}
+
+.body-contact {
+    margin-top: 130px;
+}
+
+.animation-show {
+    animation-name: intro;
+    animation-duration: 0.9s;
+    animation-delay: 0s;
+    animation-fill-mode: initial;
+
+}
+
+label {
+    background: rgba(19, 22, 16, 0.212);
+}
+
+label p {
+    color: #e1ff00;
+}
+
+input[type="text"],
+textarea,
+input[type="email"] {
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
+.perfil {
+    border-left: solid 2px #000;
+    border-bottom: solid 2px #e1ff00;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4ffcef3;
+    border-radius: 5px;
+}
+
+.body-home {
+    height: 100%;
+}
+
+.body-about {}
+
+
+.body-footer {
+    background: #060606;
+}
+
+@keyframes text-gradient {
+    0% {
+        background: linear-gradient(to right, #fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    20% {
+        background: linear-gradient(to top, #fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    60% {
+        background: linear-gradient(to left, #fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        transform: matrix(1.11, 0, 0.6, 1.1, -15,3);
+    }
+
+    80% {
+        background: linear-gradient(to bottom, #fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    100% {
+        background: linear-gradient(to right, #fff, #e1ff00);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+
+.text-web {
+    animation-name: text-gradient;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+}
+
+
+@keyframes intro {
+    0% {
+        opacity: 0%;
+        /* backdrop-filter: blur(4px); */
+    }
+
+    100% {
+        opacity: 100%;
+        /* backdrop-filter: blur(6px); */
+    }
+}
+
+@keyframes animation-1 {
+    0% {
+        transform: rotate(0deg);
+        color: #000;
+        text-shadow:
+            0 0 2px #e1ff00,
+            0 0 5px #e1ff00,
+            0 0 5px #e1ff00,
+            0 0 9px #e1ff00,
+            0 0 10px #e1ff00,
+            0 0 12px #e1ff00,
+            0 0 15px #e1ff00,
+            0 0 19px #e1ff00;
+    }
+
+    40% {
+        color: #000;
+        text-shadow:
+            0 0 2px #e1ff00,
+            0 0 8px #e1ff00;
+        transform: rotate(5deg);
+    }
+
+    60% {
+        transform: rotate(-5deg);
+
+    }
+
+    100% {
+        color: #000;
+        transform: rotate(0deg);
+        text-shadow:
+            0 0 2px #e1ff00,
+            0 0 5px #e1ff00,
+            0 0 5px #e1ff00,
+            0 0 9px #e1ff00,
+            0 0 10px #e1ff00,
+            0 0 12px #e1ff00,
+            0 0 15px #e1ff00,
+            0 0 19px #e1ff00;
+    }
+}
+
+.btn-nav:hover {
+    animation-name: animation-1;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: ease-out;
+}
